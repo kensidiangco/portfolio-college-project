@@ -96,16 +96,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 <body>
+    <div class="waves">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#FFDAB9" fill-opacity="1" d="M0,160L60,186.7C120,213,240,267,360,282.7C480,299,600,277,720,277.3C840,277,960,299,1080,282.7C1200,267,1320,213,1380,186.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+    </svg>
+    <h1>Analyn Balaqui's Website Diary</h1>
+    </div>
 	<div class="container">
 		<div class="card">
 			<div class="card-title">
 				<h3>Open your account.</h3>
 			</div>
 			<form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-				<input type="text" name="username" placeholder="Username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" />
+				<input type="text" name="username" placeholder="Username" 
+                    <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?> value="<?php echo $username; ?>" />
                 <small class="invalid-feedback"><?php echo $username_err; ?></small>
                 
-                <input type="password" name="password" placeholder="Password" <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <input type="password" name="password" placeholder="Password" 
+                    <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>>
                 <small class="invalid-feedback"><?php echo $password_err; ?></small>
 
 				<input type="submit" value="Login"/>
