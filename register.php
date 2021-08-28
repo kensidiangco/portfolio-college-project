@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $username = trim($_POST["username"]);
                 }
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Oops! Something went wrong. Please try again later...";
             }
 
             // Close statement
@@ -101,12 +101,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/register.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
     <style>
         body{ font: 14px sans-serif; }
         .wrapper{ width: 360px; padding: 20px; }
     </style>
 </head>
 <body>
+    <nav class="navigation">
+        <ul class="nav-ul">
+            <li><a class="nav-link" href="home.php">Home</a></li>
+            <li><a class="nav-link" href="diary.php">Diary</a></li>
+        </ul>
+        <ul class="nav-login">
+            <li><a class="nav-link" href="diary-entry.php">Post diary</a></li>
+            <li><a class="nav-link" href="index.php">Login</a></li>
+        </ul>
+    </nav>
     <div class="wrapper">
         <h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>

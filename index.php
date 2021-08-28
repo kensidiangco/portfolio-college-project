@@ -107,6 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			<div class="card-title">
 				<h3>Open your account.</h3>
 			</div>
+            <small class="invalid-feedback"><?php echo $login_err; ?></small>
 			<form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 				<input type="text" name="username" placeholder="Username" 
                     <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?> value="<?php echo $username; ?>" />
